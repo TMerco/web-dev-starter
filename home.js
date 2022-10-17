@@ -251,13 +251,45 @@
 //  let s = 'Hello';
 //  showMessage(s.charAt(0));
 
-
- 
-
-
-
-
-
  //DOM (Document Object Model) \\
 
- showMessage ();
+
+
+
+
+ //STYLING DOM ELEMENTS \\
+
+// /*
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+// */
+
+// const button = document.getElementById('see-review');
+
+// button.addEventListener('click', function() {
+//   console.log('click');
+// })
+
+
+
+
+
+//SHOWING AND HIDING DOM ELEMENTS \\
+
+const button = document.getElementById('see-review');
+
+button.addEventListener('click', function() {
+
+  const review = document.getElementById('review');
+
+  if (review.classList.contains('d-none')) {
+  review.classList.remove('d-none');
+  button.textContent = 'CLOSE REVIEW';
+
+  }
+  
+  else{
+    review.classList.add('d-none');
+    button.textContent = 'SEE REVIEW';
+
+  }
+});
